@@ -10,6 +10,12 @@ import { ManageComponent } from './manage/manage.component';
 import { SearchComponent } from './search/search.component';
 import { TestComponent } from './test/test.component';
 
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment.prod';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,10 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
