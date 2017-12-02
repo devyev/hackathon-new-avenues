@@ -15,18 +15,11 @@ export class ProgramsComponent implements OnInit {
   constructor(private programService: ProgramService) { }
 
   ngOnInit() {
-    // this.getPrograms();
+    this.getPrograms();
   }
 
-  getPrograms(): void {
-    this.programService.getPrograms()
-    .subscribe(programs => this.programs = programs);
-  }
-
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.programService.addProgram({ name } as Program);
+  async getPrograms() {
+    this.programs = await this.programService.getPrograms();
   }
 
   delete(program: Program): void {

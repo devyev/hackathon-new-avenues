@@ -18,6 +18,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment.prod';
 import { ProgramsComponent } from './programs/programs.component';
 import { ProgramService } from './program.service';
+import { ProgramDetailComponent } from './program-detail/program-detail.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProgramService } from './program.service';
     ManageComponent,
     SearchComponent,
     TestComponent,
-    ProgramsComponent
+    ProgramsComponent,
+    ProgramDetailComponent
   ],
   imports: [
     BrowserModule,

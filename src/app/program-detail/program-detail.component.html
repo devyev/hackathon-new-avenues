@@ -1,0 +1,12 @@
+<div *ngIf="program">
+  <h2>{{ program.title | uppercase }}</h2>
+  <div><span>type: </span>{{program.type}}</div>
+  <div><span>typeCode: </span>{{program.typeCode}}</div>
+  <div><span>Description: </span>{{program.description}}</div>
+  <div><span>Organization Name: </span>{{program.orgName}}</div>
+  <div><span>Event URL: </span>{{program.eventURL}}</div>
+  <div><span>Organiztion URL: </span>{{program.orgURL}}</div>
+  <div><span>Phone: </span>{{program.phone}}</div>
+  <div><span>Email: </span>{{program.email}}</div>
+  <button (click)="goBack()">go back</button>\
+</div>

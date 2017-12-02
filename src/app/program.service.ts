@@ -21,8 +21,18 @@ export class ProgramService {
   ) { }
 
   /** GET programs from the server */
-  getPrograms (): Observable<Program[]> {
-    return this.http.get<Program[]>(this.programsUrl);
+
+  async getPrograms(): Promise<Program[]> {
+    //return this.http.get<Program[]>(this.programsUrl);
+    const program1 = new Program();
+    program1.id = 1;
+    program1.title = "PCC Vocation Training";
+    return Promise.resolve([program1]);
+  }
+
+  getProgram(id: number): Observable<Program> {
+    const url = `${this.programsUrl}/${id}`;
+    return this.http.get<Program>(url);
   }
 
   /* GET programs whose name contains search term */
@@ -47,26 +57,3 @@ export class ProgramService {
 
   }
 }
-
-/** GET program by id. Return `undefined` when id not found */
-// getProgramNo404<Data>(id: number): Observable<Program> {
-//   const url = `${this.programsUrl}/?id=${id}`;
-//   return this.http.get<Program[]>(url)
-//     .pipe(
-//       map(programs => programs[0]), // returns a {0|1} element array
-//       tap(h => {
-//         const outcome = h ? `fetched` : `did not find`;
-//         this.log(`${outcome} program id=${id}`);
-//       }),
-//       catchError(this.handleError<Program>(`getProgram id=${id}`))
-//     );
-// }
-
-/** GET program by id. Will 404 if id not found */
-// getProgram(id: number): Observable<Program> {
-//   const url = `${this.programsUrl}/${id}`;
-//   return this.http.get<Program>(url).pipe(
-//     tap(_ => this.log(`fetched program id=${id}`)),
-//     catchError(this.handleError<Program>(`getProgram id=${id}`))
-//   );
-// }
