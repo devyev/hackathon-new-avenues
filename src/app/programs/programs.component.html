@@ -1,0 +1,20 @@
+<h2>Programs:</h2>
+
+<div>
+  <label>Program name:
+    <input #programName />
+  </label>
+  <button (click)="add(programName.value); programName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="programs">
+  <li *ngFor="let program of programs">
+    <a routerLink="/detail/{{program.id}}">
+      <span class="id">{{program.id}}</span> {{program.name}}
+    </a>
+    <button class="delete" title="delete program"
+    (click)="delete(program)">x</button>
+  </li>
+</ul>
