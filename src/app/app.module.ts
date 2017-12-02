@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { ManageComponent } from './manage/manage.component';
+import { SearchComponent } from './search/search.component';
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -17,7 +19,9 @@ import { environment } from '../environments/environment.prod';
   declarations: [
     AppComponent,
     NavComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ManageComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
