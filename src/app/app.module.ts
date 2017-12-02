@@ -8,6 +8,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ManageComponent } from './manage/manage.component';
 import { SearchComponent } from './search/search.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SearchComponent } from './search/search.component';
     NavComponent,
     WelcomeComponent,
     ManageComponent,
-    SearchComponent
+    SearchComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
