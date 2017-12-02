@@ -18,6 +18,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment.prod';
 import { ProgramsComponent } from './programs/programs.component';
 import { ProgramService } from './program.service';
+import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ProgramService } from './program.service';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [ProgramService],
   bootstrap: [AppComponent]
