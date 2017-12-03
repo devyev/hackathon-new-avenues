@@ -12,25 +12,16 @@ import { ProgramService } from '../program.service';
 export class ProgramsComponent implements OnInit {
   programs: Program[];
 
-  constructor(private programService: ProgramService) { }
+  constructor(public programService: ProgramService) { }
 
   ngOnInit() {
-    // this.getPrograms();
-  }
-
-  getPrograms(): void {
-    this.programService.getPrograms()
-    .subscribe(programs => this.programs = programs);
-  }
-
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.programService.addProgram({ name } as Program);
+    
   }
 
   delete(program: Program): void {
+    
     this.programs = this.programs.filter(h => h !== program);
     this.programService.deleteProgram(program);
   }
+  
 }

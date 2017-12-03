@@ -1,3 +1,36 @@
-<p>
-  manage works!
-</p>
+<h2>Add a program:</h2>
+<div class="programForm">
+  <label>Program Id:
+    <input #programId />
+  </label>
+  <label>Program Type:
+    <input #programType />
+  </label>
+  <label>Program Type Code:
+    <input #programTypeCode />
+  </label>
+  <label>Program Title:
+    <input #programTitle />
+  </label>
+  <label>Program Description:
+    <input #programDescription />
+  </label>
+  <label>Program Organization Name:
+    <input #programOrgName />
+  </label>
+  <label>Program Event URL:
+    <input #programEventURL />
+  </label>
+  <label>Program Organization URL:
+    <input #programOrgURL />
+  </label>
+  <label>Program Phone:
+    <input #programPhone />
+  </label>
+  <label>Program Email:
+    <input #programEmail />
+  </label>
+  <button (click)="add(programId.value, programType.value, programTypeCode.value, programTitle.value, programDescription.value, programOrgName.value, programEventURL.value, programOrgURL.value, programPhone.value, programEmail.value); programId.value=''; programType.value=''; programTypeCode.value=''; programTitle.value=''; programDescription.value=''; programOrgName.value=''; programEventURL.value=''; programOrgURL.value=''; programPhone.value=''; programEmail.value=''">
+    add
+  </button>
+</div>

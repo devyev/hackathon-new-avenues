@@ -20,6 +20,7 @@ import { ProgramsComponent } from './programs/programs.component';
 import { ProgramService } from './program.service';
 import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
 
+import { ProgramDetailComponent } from './program-detail/program-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore
     ManageComponent,
     SearchComponent,
     TestComponent,
-    ProgramsComponent
+    ProgramsComponent,
+    ProgramDetailComponent
   ],
   imports: [
     BrowserModule,

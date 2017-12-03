@@ -1,4 +1,12 @@
 export class Program {
   id: number;
-  name: string;
+  type: string;
+  typeCode: string;
+  title: string;
+  description: string;
+  orgName: string;
+  eventURL: string;
+  orgURL: string;
+  phone: string;
+  email: string;
 }

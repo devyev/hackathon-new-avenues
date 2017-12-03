@@ -1,18 +1,9 @@
 <h2>Programs:</h2>
 
-<div>
-  <label>Program name:
-    <input #programName />
-  </label>
-  <button (click)="add(programName.value); programName.value=''">
-    add
-  </button>
-</div>
-
 <ul class="programs">
-  <li *ngFor="let program of programs">
+  <li *ngFor="let program of programService.programs  | async">
     <a routerLink="/detail/{{program.id}}">
-      <span class="id">{{program.id}}</span> {{program.name}}
+      <span class="id">{{program.orgName}}</span> {{program.title}}
     </a>
     <button class="delete" title="delete program"
     (click)="delete(program)">x</button>

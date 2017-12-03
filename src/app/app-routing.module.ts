@@ -5,6 +5,7 @@ import { ManageComponent } from './manage/manage.component';
 import { SearchComponent } from './search/search.component';
 import { TestComponent } from './test/test.component';
 import { ProgramsComponent } from './programs/programs.component';
+import { ProgramDetailComponent } from './program-detail/program-detail.component';
 
 const routes: Routes = [
   {
